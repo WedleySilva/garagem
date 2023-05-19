@@ -34,6 +34,7 @@ class Migration(migrations.Migration):
                 ('Categoria', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='garagem.categoria')),
                 ('Cor', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='garagem.cor')),
                 ('Marca', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='garagem.marca')),
+                ('Modelo', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='garagem.modelo')),
             ],
         ),
     ]

@@ -31,7 +31,12 @@ class Migration(migrations.Migration):
         ),
         migrations.RenameField(
             model_name='veiculo',
-            old_name='Nome',
+            old_name='preco',
+            new_name='preco',
+        ),
+        migrations.RenameField(
+            model_name='veiculo',
+            old_name='Modelo',
             new_name='modelo',
         ),
     ]

@@ -1,4 +1,5 @@
 from django.db import models
+from uploader.models import Image
 
 class Acessorio(models.Model):
     descricao = models.CharField(max_length=100)
@@ -54,9 +55,17 @@ class Veiculo(models.Model):
     marca = models.ForeignKey(
         Marca, on_delete=models.CASCADE, related_name="veiculos",
     )
+    
     modelo = models.ForeignKey(
-        Modelo, on_delete=models.CASCADE, related_name="veiculos",
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+       
     )
+    modelo = ImageSerializer(required=False)
 
 def __str__(self):
         return f"{self.ano} - {self.marca} - {self.modelo} - {self.cor} - {self.categoria} - {self.preco}"

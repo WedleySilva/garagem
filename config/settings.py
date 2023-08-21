@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "garagem",
+    "usuario",
 ]
+
+AUTH_USER_MODEL = "usuario.Usuario"
 
 REST_FRAMEWORK = {  
     "DEFAULT_PERMISSION_CLASSES": [

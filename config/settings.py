@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_simplejwt",
-    "garagem",
     "usuario",
+    "garagem",
+    
 ]
 
 AUTH_USER_MODEL = "usuario.Usuario"
